@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>firstPage</title>
+</head>
+<body>
+    
+    <h1><em>Python. Syntax and semantics</em></h1>
+
+    <p>Main article:<a href="https://en.wikipedia.org/wiki/Python_(programming_language)#Syntax_and_semantics" target="_blank">Python syntax and semantics</a><hr></p>
+   
+    <p>Python is meant to be an easily readable language. Its formatting is visually uncluttered and often uses English keywords where other languages use punctuation. Unlike many other languages, it does not use curly brackets to delimit blocks, and semicolons after statements are allowed but rarely used. It has fewer syntactic exceptions and special cases than C or Pascal.[<sup><strong>80</strong></sup>]</p>
+
+    <h2 id="Indent">Indentation</h2>
+
+    <p>Python uses whitespace indentation, rather than curly brackets or keywords, to delimit blocks. An increase in indentation comes after certain statements; a decrease in indentation signifies the end of the current block.[<sup><strong>81</strong></sup>] Thus, the program's visual structure accurately represents its semantic structure.[<sup><strong>82</strong></sup>] This feature is sometimes termed the off-side rule. Some other languages use indentation this way; but in most, indentation has no semantic meaning. The recommended indent size is four spaces.[<sup><strong>83</strong></sup>]</p>
+
+    <h2 id="StatementsAndControlFlow">Statements and control flow</h2>
+
+    <p>Python's statements include the following:
+    <pre>
+    The assignment statement, using a single equa ls sign =
+    The if statement, which conditionally executes a block of code, along with else and elif (a contraction of else if)
+    The for statement, which iterates over an iterable object, capturing each element to a variable for use by the attached block; the variable is not deleted when the loop finishes
+    The while statement, which executes a block of code as long as boolean condition is true
+    The try statement, which allows exceptions raised in its attached code block to be caught and handled by except clauses (or new syntax except* in Python 3.11 for exception groups);[84] the try statement also ensures that clean-up code in a finally block is always run regardless of how the block exits
+    The raise statement, used to raise a specified exception or re-raise a caught exception
+    The class statement, which executes a block of code and attaches its local namespace to a class, for use in object-oriented programming
+    The def statement, which defines a function or method
+    The with statement, which encloses a code block within a context manager, allowing resource-acquisition-is-initialization (RAII)-like behavior and replacing a common try/finally idiom[85] Examples of a context include acquiring a lock before some code is run, and then releasing the lock; or opening and then closing a file
+    The break statement, which exits a loop
+    The continue statement, which skips the rest of the current iteration and continues with the next
+    The del statement, which removes a variable—deleting the reference from the name to the value, and producing an error if the variable is referred to before it is redefined [c]
+    The pass statement, serving as a NOP (i.e., no operation), which is syntactically needed to create an empty code block
+    The assert statement, used in debugging to check for conditions that should apply
+    The yield statement, which returns a value from a generator function (and also an operator); used to implement coroutines
+    The return statement, used to return a value from a function
+    The import and from statements, used to import modules whose functions or variables can be used in the current program
+    The match and case statements, analogous to a switch statement construct, which compares an expression against one or more cases as a control-flow measure
+    The assignment statement (=) binds a name as a reference to a separate, dynamically allocated object. Variables may subsequently be rebound at any time to any object. In Python, a variable name is a generic reference holder without a fixed data type; however, it always refers to some object with a type. This is called dynamic typing—in contrast to statically-typed languages, where each variable may contain only a value of a certain type.<br>
+    Python does not support tail call optimization or first-class continuations; according to Van Rossum, the language never will.[<sup><strong>86</strong></sup>][<sup><strong>87</strong></sup>] However, better support for coroutine-like functionality is provided by extending Python's generators.[<sup><strong>88</strong></sup>] Before 2.5, generators were lazy iterators; data was passed unidirectionally out of the generator. From Python 2.5 on, it is possible to pass data back into a generator function; and from version 3.3, data can be passed through multiple stack levels.[<sup><strong>89</strong></sup>]</pre></p>
+
+    <h2 id="Expressions">Expressions</h2>
+    
+    <p>Python's expressions include the following:
+    The +, -, and * operators for mathematical addition, subtraction, and multiplication are similar to other languages, but the behavior of division differs. There are two types of division in Python: floor division (or integer division) //, and floating-point division /.[90] Python uses the ** operator for exponentiation.
+    Python uses the + operator for string concatenation. The language uses the * operator for duplicating a string a specified number of times.
+    The @ infix operator is intended to be used by libraries such as NumPy for matrix multiplication.[91][92]
+    The syntax :=, called the "walrus operator", was introduced in Python 3.8. This operator assigns values to variables as part of a larger expression.[93]
+    In Python, == compares two objects by value. Python's is operator may be used to compare object identities (i.e., comparison by reference), and comparisons may be chained—for example, a <= b <= c.
+    Python uses and, or, and not as Boolean operators.
+    Python has a type of expression called a list comprehension, and a more general expression called a generator expression.[64]
+    Anonymous functions are implemented using lambda expressions; however, there may be only one expression in each body.
+    Conditional expressions are written as x if c else y.[94] (This is different in operand order from the c ? x : y operator common to many other languages.)
+    Python makes a distinction between lists and tuples. Lists are written as [1, 2, 3], are mutable, and cannot be used as the keys of dictionaries (since dictionary keys must be immutable in Python). Tuples, written as (1, 2, 3), are immutable and thus can be used as the keys of dictionaries, provided that all of the tuple's elements are immutable. The + operator can be used to concatenate two tuples, which does not directly modify their contents, but produces a new tuple containing the elements of both. For example, given the variable t initially equal to (1, 2, 3), executing t = t + (4, 5) first evaluates t + (4, 5), which yields (1, 2, 3, 4, 5); this result is then assigned back to t—thereby effectively "modifying the contents" of t while conforming to the immutable nature of tuple objects. Parentheses are optional for tuples in unambiguous contexts.[95]
+    Python features sequence unpacking where multiple expressions, each evaluating to something assignable (e.g., a variable or a writable property) are associated just as in forming tuple literal; as a whole, the results are then put on the left-hand side of the equal sign in an assignment statement. This statement expects an iterable object on the right-hand side of the equal sign to produce the same number of values as the writable expressions on the left-hand side; while iterating, the statement assigns each of the values produced on the right to the corresponding expression on the left.[96]
+    Python has a "string format" operator % that functions analogously to printf format strings in the C language—e.g. "spam=%s eggs=%d" % ("blah", 2) evaluates to "spam=blah eggs=2". In Python 2.6+ and 3+, this operator was supplemented by the format() method of the str class, e.g., "spam={0} eggs={1}".format("blah", 2). Python 3.6 added "f-strings": spam = "blah"; eggs = 2; f'spam={spam} eggs={eggs}'.[97]<hr></p>
+    <p>Page navigation:<br>
+    <a href="#Indent">Indentation</a><br>
+    <a href="#StatementsAndControlFlow">Statements and control flow</a><br>
+    <a href="#Expressions">Expressions</a><br><hr>
+    <a href="secondPage.html">Find out more about History of Python</a><br>
+    <a href="TPage/thirdPage.html">Find out more about Design philosophy and features of Python</a>
+    </p>
+</body>
+</html>
