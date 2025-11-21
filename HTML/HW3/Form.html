@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="">
+<p>
+    <label for="fName">Your name</label>
+    <input placeholder="Alex" type="text" id="fName" name="Name"><br><br>
+    <label for="dOFb">Your Birthday</label>
+    <input type="date" id="dOFb" name="DayOfBirth" min="1940-01-01"><br><br>
+    <label for="NumOfKids">How many kids do you have:</label>
+    <input type="number" name="NumOfKids" id="NumOfKids" min="1" max="10"><br><br>
+    <label for="email">Your email</label>
+    <input type="email" id="email" name="email"><br><br>
+    <input type="hidden" name="ID" value="5634345"><br><br>
+    <label for="fPass">Password</label>
+    <input type="password" id="fPass" name="Password"><br><br>
+</p>
+<fieldset>
+    <legend>Your favourite game</legend>
+<label for="Foot">Football</label>
+<input type="checkbox" id="Foot" value="Traditional Football"><br>
+<label for="Basket">Basketball</label>
+<input type="checkbox" id="Basket" value="Traditional Basketball"><br>
+<label for="Hoc">Hockey</label>
+<input type="checkbox" id="Hoc" value="Traditional Hockey">
+<h3>Download a file with yor favourite moments</h3>
+<p><label for="Download">Select a file:</label>
+<input type="file" id="Download" name="Dfile"></p>
+</fieldset>
+<p>
+    <input type="submit" value="Submit"><br><br>
+    <input type="reset" value="Reset"><br></br>
+    <input type="button" onclick="alert('FINISHED FOR TODAY!!!')" value="Finish"><br><br>
+</p>
+<p>
+    <label for="fColor">Your favourite colour</label>
+    <input type="color" id="fColor" name="FavouriteColour">
+    <input type="image" src="" alt="Submit" width="50" height="50">
+</p>
+</form>
+</body>
+</html>
