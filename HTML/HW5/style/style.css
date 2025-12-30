@@ -1,0 +1,17 @@
+*{text-decoration: underline;}
+h3,p{
+    color: blueviolet;
+    background-color: aqua;
+}
+span{color: rgba(34, 21, 94, 0.308);}
+p span{color: brown;}
+#middle{background-color: blueviolet; color: brown;} 
+.long{background-color: rgb(216, 142, 51);
+color: rgb(3, 3, 66);} 
+.big{font-size: 20px;}
+ul li:first-child{background-color: yellowgreen;
+font-style: italic;}  
+ul li:last-child{background-color: yellowgreen;
+font-style: italic;}  
+ul li:nth-child(3){background-color: rgb(223, 15, 8);
+color: #4413ca;}  
